@@ -3,11 +3,15 @@ import React from 'react'
 import Categories from '../Categories/Categories'
 import Card from '../Card/Card'
 
+import { useAppSelector } from '../../store/hooks'
+
 import cl from './Content.module.scss'
 
-import data from '../../assets/data.json'
 
 const Content: React.FC = () => {
+
+	const data = useAppSelector(state => state.products.products)
+
 	return (
 		<section className={cl.root}>
 			<Categories />

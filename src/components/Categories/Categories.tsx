@@ -15,7 +15,7 @@ const Categories: React.FC = () => {
 	return (
 		<ul className={cl.filterBar}>
 				{categories.map(str => (
-					<li className={cl.filterBar__item}>
+					<li key={str} className={cl.filterBar__item}>
 						<button className={cl.filterBar__button}>{str}</button>
 					</li>
 				))}

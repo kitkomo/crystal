@@ -1,7 +1,6 @@
 import React from 'react'
 
 import cl from './Card.module.scss'
-import { format } from 'path'
 
 interface ICard {
 	imageUrl: string
