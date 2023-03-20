@@ -1,0 +1,19 @@
+@import 'variables';
+@import 'fonts';
+
+@import 'common';
+
+* {
+	box-sizing: border-box;
+	font-family: 'Satoshi';
+}
+
+body {
+	margin: 0;
+	background-color: $secondary;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}

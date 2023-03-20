@@ -1,0 +1,21 @@
+.root {
+	position: relative;
+	// max-width: 356px;
+
+	input {
+		padding: 20px 40px;
+		border-radius: 12px;
+		border: 2px solid #d9d9d9;
+		width: 100%;
+		text-transform: uppercase;
+		font-weight: 500;
+		font-size: 14px;
+	}
+
+	svg {
+		position: absolute;
+		top: 50%;
+		right: 20px;
+		transform: translateY(-50%);
+	}
+}

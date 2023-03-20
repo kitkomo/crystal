@@ -1,0 +1,17 @@
+@mixin font-face($font-family, $url, $weight) {
+	@font-face {
+		font-family: $font-family;
+		src: 
+			local($font-family),
+			url('#{$url}.woff2') format('woff2'),
+			url('#{$url}.woff') format('woff'),
+			url('#{$url}.ttf') format('ttf');
+		font-weight: #{$weight};
+		font-display: swap;
+		font-style: normal;
+	}
+}
+
+@include font-face("Satoshi", "../../public/fonts/Satoshi-Regular", '400');
+@include font-face("Satoshi", "../../public/fonts/Satoshi-Medium", '500');
+@include font-face("Satoshi", "../../public/fonts/Satoshi-Bold", '700');

@@ -1,0 +1,45 @@
+.root {
+	display: block;
+	max-width: 100%;
+	background-color: rgba(241,241,241,255);
+	max-width: 100%;
+	position: relative;
+}
+
+.image {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.info {
+	padding: 0 20px 20px;
+}
+
+.type {
+	text-transform: uppercase;
+	font-weight: 400;
+	font-size: 11px;
+	opacity: 0.8;
+}
+
+.name {
+	font-size: 18px;
+	font-weight: 500;
+	margin: 10px 0 10px;
+	height: 25px;
+	overflow: hidden;
+	color: #3B3B3B;
+}
+
+.price {
+	display: block;
+	font-weight: 500;
+	font-size: 16px;
+	text-align: right;
+	position: absolute;
+	top: 20px;
+	right: 10px;
+	opacity: 0.5;
+}
