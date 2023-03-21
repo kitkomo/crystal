@@ -1,12 +1,12 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit'
 
-export const categories: string[] = ['All products', 'Perfume', 'Skinshare']
+export const categories: string[] = ['All products', 'Perfume', 'Skincare']
 
-interface IFilterSlice {
+interface IFilter {
 	category: number
 }
 
-const initialState: IFilterSlice = {
+const initialState: IFilter = {
 	category: 0,
 }
 

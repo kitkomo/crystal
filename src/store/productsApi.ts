@@ -19,10 +19,10 @@ export const productsApi = createApi({
 		getProducts: build.query<ProductItem[], string>({
 			query: () => '/crystal',
 		}),
-		category: build.query<ProductItem[], string>({
-			query: (id = '') => `/crystal?category=${id}`,
+		product: build.query<ProductItem[], string>({
+			query: (article = '') => `/crystal?article=${article}`,
 		})
 	})
 })
 
-export const {useGetProductsQuery, useCategoryQuery} = productsApi
+export const {useGetProductsQuery, useProductQuery} = productsApi

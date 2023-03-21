@@ -1,0 +1,99 @@
+.mainContainer {
+	display: flex;
+	gap: 50px;
+	position: relative;
+}
+
+.name {
+	margin: 25px 0 0;
+	position: absolute;
+	width: 100%;
+	max-width: 50%;
+	right: 0;
+
+	span {
+		text-transform: uppercase;
+		font-weight: 500;
+		letter-spacing: 5px;
+	}
+
+	h1 {
+		margin: 5px 0;
+		width: 100%;
+		text-transform: capitalize;
+		font-size: 50px;
+		font-weight: 700;
+	}
+}
+
+.image {
+	width: 70%;
+	border-radius: 12px;
+}
+
+.article {
+	font-size: 18px;
+	font-weight: 500;
+	opacity: 0.5;
+}
+
+.info {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	gap: 30px;
+}
+
+.volume {
+	span {
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+
+	ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 15px 0 0;
+		display: flex;
+		gap: 15px;
+
+		button {
+			cursor: pointer;
+			padding: 10px;
+			height: 60px;
+			min-width: 60px;
+			font-size: 16px;
+			font-weight: 600;
+			background-color: transparent;
+			border: 1px solid #000;
+			opacity: 0.5;
+			transition: opacity 0.15s ease-in-out;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.price {
+	font-weight: 700;
+	font-size: 26px;
+}
+
+.toCartBtn {
+	cursor: pointer;
+	padding: 18px 10px;
+	background-color: #000;
+	border: none;
+	color: #FFF;
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+	transition: background-color 0.15s ease-in-out;
+
+	&:hover {
+		background-color: #2B662D;
+	}
+}
