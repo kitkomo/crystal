@@ -1,4 +1,6 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
+
 import Logo from '../UI/Logo'
 import Button from '../UI/Button'
 import Input from '../UI/Input'
@@ -12,16 +14,16 @@ const Header: React.FC = () => {
 			<Logo/>
 			<ul className={cl.menu}>
 				<li className={cl.menu__item}>
-					<a href='/'>Shop</a>
+					<NavLink className={(props) => props.isActive ? cl.activeLink : ''} to='/'>Shop</NavLink>
 				</li>
 				<li className={cl.menu__item}>
-					<a href='/'>Collections</a>
+					<NavLink className={(props) => props.isActive ? cl.activeLink : ''} to='/favorites'>Favorites</NavLink>
 				</li>
 				<li className={cl.menu__item}>
-					<a href='/'>Contact</a>
+					<NavLink className={(props) => props.isActive ? cl.activeLink : ''} to='/contact'>Contact</NavLink>
 				</li>
 				<li className={cl.menu__item}>
-					<a href='/'>About</a>
+					<NavLink className={(props) => props.isActive ? cl.activeLink : ''} to='/about'>About</NavLink>
 				</li>
 			</ul>
 			<Input/>

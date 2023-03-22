@@ -2,6 +2,7 @@
 	// display: flex;
 	// align-items: center;
 	// justify-content: space-between;
+	margin: 10px 0 25px;
 	display: grid;
 	grid-template: 60px / 200px auto minmax(auto, 350px) 200px;
 	column-gap: 20px;
@@ -34,5 +35,23 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			width: 5px;
+			height: 5px;
+			background-color: #000;
+			border-radius: 50%;
+			bottom: 10px;
+			opacity: 0;
+			transition: opacity 0.15s ease-in-out;
+		}
 	}
+}
+
+.activeLink::after {
+	opacity: 1 !important;
 }
