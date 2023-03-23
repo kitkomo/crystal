@@ -1,0 +1,81 @@
+.backdrop {
+	position: fixed;
+	height: 100vh;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	background-color: rgba($color: #000000, $alpha: 0.2);
+	z-index: 99;
+}
+
+.title {
+	margin: 80px 0 0;
+	font-size: 20px;
+
+	span {
+		font-size: 35px;
+	}
+}
+
+.cart {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 50%;
+	height: 100vh;
+	background-color: #fff;
+	padding: 0 55px 50px 80px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 50px;
+	z-index: 5;
+}
+
+.items {
+	padding-right: 25px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	overflow-y: scroll;
+}
+
+.closeBtn {
+	position: absolute;
+	top: 50px;
+	right: 50px;
+}
+
+.totalTitle {
+	display: block;
+	font-weight: 500;
+	text-transform: uppercase;
+	text-align: right;
+	font-size: 16px;
+	text-align: right;
+	letter-spacing: 2px;
+}
+
+.totalPrice {
+	display: block;
+	font-size: 35px;
+	font-weight: 700;
+	text-align: right;
+	margin: 0 0 40px;
+}
+
+.empty {
+	margin: 80px 0 0;
+	h2 {
+		font-size: 45px;
+		font-weight: 700;
+	}
+
+	p {
+		font-weight: 500;
+		font-size: 25px;
+	}
+}

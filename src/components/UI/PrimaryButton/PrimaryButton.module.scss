@@ -1,0 +1,17 @@
+.root {
+	width: 100%;
+	cursor: pointer;
+	padding: 18px 10px;
+	border-radius: 12px;
+	background-color: #000;
+	border: none;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+	transition: background-color 0.15s ease-in-out;
+
+	&:hover {
+		background-color: #2b662d;
+	}
+}

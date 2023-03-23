@@ -13,7 +13,7 @@ interface ICard {
 
 const Card: React.FC<ICard> = ({article, imageUrl, type, name }) => {
 	return (
-		<Link to={'product/' + article} className={cl.root}>
+		<Link to={'/shop/' + article} className={cl.root}>
 			<img className={cl.image} src={imageUrl} alt='product' />
 			<div className={cl.info}>
 				<span className={cl.type}>{type}</span>

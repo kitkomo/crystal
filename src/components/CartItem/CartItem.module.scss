@@ -1,0 +1,74 @@
+.item {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+
+	&:hover {
+		.count {
+			opacity: 1;
+		}
+
+		.delBtn {
+			opacity: 1;
+		}
+	}
+}
+
+.image {
+	width: 140px;
+	height: 100px;
+	object-fit: cover;
+	object-position: center;
+}
+
+.info {
+	position: relative;
+	width: 100%;
+}
+
+.title {
+	display: block;
+	font-weight: 600;
+	font-size: 20px;
+	margin: 10px 0;
+	height: 25px;
+	overflow: hidden;
+}
+
+.subtitle {
+	font-weight: 500;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+.volume {
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.price {
+	position: absolute;
+	right: 0;
+	bottom: 10px;
+	font-weight: 700;
+	font-size: 18px;
+}
+
+.count {
+	font-weight: 700;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	opacity: 0;
+	transition: opacity 0.15s ease-in-out;
+}
+
+.delBtn {
+	opacity: 0;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: opacity 0.15s ease-in-out;
+}
