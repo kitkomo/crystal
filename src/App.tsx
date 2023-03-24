@@ -6,17 +6,22 @@ import Cart from './components/Cart/Cart'
 import ShopPage from './pages/ShopPage'
 import Product from './components/Product/Product'
 import Footer from './components/Footer/Footer'
+import ContactPage from './pages/ContactPage'
+import AboutPage from './pages/AboutPage'
 
 const App: React.FC = () => {
 	return (
 		<div className='app-wrapper'>
 			<Header />
-			<Cart/>
-			<Routes>
-				<Route path='/shop' element={<ShopPage />} />
-				<Route path='/shop/:article' element={<Product />} />
-			</Routes>
-
+			<Cart />
+			<main className='main'>
+				<Routes>
+					<Route path='/' element={<ShopPage />} />
+					<Route path='/:article' element={<Product />} />
+					<Route path='/contact' element={<ContactPage />} />
+					<Route path='/about' element={<AboutPage />} />
+				</Routes>
+			</main>
 			<Footer />
 		</div>
 	)

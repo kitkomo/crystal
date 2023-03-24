@@ -5,7 +5,7 @@ import cl from './Logo.module.scss'
 
 const Logo: React.FC = () => {
 	return (
-		<Link to='/shop' className={cl.logo}>
+		<Link to='/' className={cl.logo}>
 			crystal.
 		</Link>
 	)

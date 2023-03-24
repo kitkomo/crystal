@@ -19,19 +19,19 @@ const Header: React.FC = () => {
 				<li className={cl.menu__item}>
 					<NavLink
 						className={props => (props.isActive ? cl.activeLink : '')}
-						to='/shop'
+						to='/'
 					>
 						Shop
 					</NavLink>
 				</li>
-				<li className={cl.menu__item}>
+				{/* <li className={cl.menu__item}>
 					<NavLink
 						className={props => (props.isActive ? cl.activeLink : '')}
 						to='/favorites'
 					>
 						Favorites
 					</NavLink>
-				</li>
+				</li> */}
 				<li className={cl.menu__item}>
 					<NavLink
 						className={props => (props.isActive ? cl.activeLink : '')}
@@ -49,7 +49,7 @@ const Header: React.FC = () => {
 					</NavLink>
 				</li>
 			</ul>
-			<Input />
+			{/* <Input /> */}
 			<Button onClick={() => dispatch(cartState())}>View Cart</Button>
 		</header>
 	)

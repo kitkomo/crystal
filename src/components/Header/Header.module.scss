@@ -4,7 +4,8 @@
 	// justify-content: space-between;
 	margin: 10px 0 25px;
 	display: grid;
-	grid-template: 60px / 200px auto minmax(auto, 350px) 200px;
+	// grid-template: 60px / 200px auto minmax(auto, 350px) 200px;
+	grid-template: 60px / 200px auto 200px;
 	column-gap: 20px;
 }
 
@@ -18,7 +19,7 @@
 
 .menu__item {
 	min-width: 150px;
-
+	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;

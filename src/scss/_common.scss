@@ -2,6 +2,9 @@
 	padding: 20px;
 	max-width: 1400px;
 	margin: 0 auto;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 .rounded {
@@ -12,4 +15,10 @@
 	background-color: #FFF;
 	border-radius: 12px;
 	padding: 32px 24px;
+}
+
+.main {
+	min-height: 100%;
+	height: 100%;
+	flex: 1;
 }
