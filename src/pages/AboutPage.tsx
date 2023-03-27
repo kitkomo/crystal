@@ -31,15 +31,25 @@ const Contact = styled.section`
 
 const AboutPage: React.FC = () => {
 	return (
-		<Contact>
-			<h2>about</h2>
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore officia blanditiis iure voluptatem, corporis molestias ex</p>
-			<div>
-				<span>
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis quo facilis iure, hic quidem quam, error possimus perferendis, deleniti dolore culpa? Obcaecati aperiam, nihil molestias omnis consequatur id modi recusandae!
-				</span>
-			</div>
-		</Contact>
+		<div className='content-wrapper'>
+			<section className='content'>
+				<Contact>
+					<h2>about</h2>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+						officia blanditiis iure voluptatem, corporis molestias ex
+					</p>
+					<div>
+						<span>
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+							Perspiciatis quo facilis iure, hic quidem quam, error possimus
+							perferendis, deleniti dolore culpa? Obcaecati aperiam, nihil
+							molestias omnis consequatur id modi recusandae!
+						</span>
+					</div>
+				</Contact>
+			</section>
+		</div>
 	)
 }
 

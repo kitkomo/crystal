@@ -31,17 +31,21 @@ const Contact = styled.section`
 
 const ContactPage: React.FC = () => {
 	return (
-		<Contact>
-			<h2>contacts</h2>
-			<p>you can use the following methods to contact us</p>
-			<div>
-				<span>8 999 999-99-99</span>
-				<span>
-					for orders with delivery within the territory of the Russian
-					Federation
-				</span>
-			</div>
-		</Contact>
+		<div className='content-wrapper'>
+			<section className='content'>
+				<Contact>
+					<h2>contacts</h2>
+					<p>you can use the following methods to contact us</p>
+					<div>
+						<span>8 999 999-99-99</span>
+						<span>
+							for orders with delivery within the territory of the Russian
+							Federation
+						</span>
+					</div>
+				</Contact>
+			</section>
+		</div>
 	)
 }
 
