@@ -1,0 +1,33 @@
+.block {
+	margin: 60px 0;
+}
+
+.blocks {
+	margin: 50px 0;
+	display: grid;
+	grid-template-columns: repeat(2, auto);
+	grid-auto-rows: 1fr;
+	column-gap: 50px;
+	row-gap: 80px;
+}
+
+.block__title {
+	font-size: 25px;
+	font-weight: 700;
+	margin: 0;
+}
+
+.block__info {
+	margin: 8px 0 25px;
+	color: #818181;
+	font-size: 17px;
+}
+
+.block__connect {
+	font-size: 21px;
+
+	span {
+		font-weight: 600;
+		font-size: 17px;
+	}
+}
