@@ -24,14 +24,14 @@ const Header: React.FC = () => {
 						Shop
 					</NavLink>
 				</li>
-				{/* <li className={cl.menu__item}>
+				<li className={cl.menu__item}>
 					<NavLink
 						className={props => (props.isActive ? cl.activeLink : '')}
 						to='/favorites'
 					>
 						Favorites
 					</NavLink>
-				</li> */}
+				</li>
 				<li className={cl.menu__item}>
 					<NavLink
 						className={props => (props.isActive ? cl.activeLink : '')}

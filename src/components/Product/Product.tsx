@@ -7,14 +7,17 @@ import { addToCart } from '../../store/slices/cartSlice'
 import { useProductQuery } from '../../store/productsApi'
 import { IProduct } from './../../models/IProduct'
 import { toRub } from '../../helpers/currencyFormat'
+import { addToFavorites, removeFromFavorites } from '../../store/slices/favoritesSlice'
 
 import cl from './Product.module.scss'
+import FavoritesBtn from '../UI/FavoritesBtn'
 
 const Product: React.FC = () => {
 	const { article } = useParams()
 	const { data } = useProductQuery(`${article}`)
 
 	const [activeVolume, setActiveVolume] = React.useState(0)
+	const favItems = useAppSelector(state => state.favorites.items)
 
 	const dispatch = useAppDispatch()
 
@@ -31,6 +34,8 @@ const Product: React.FC = () => {
 			}),
 		)
 	}
+
+	// const isInFav = favItems.find(item => item.id === )
 
 	return (
 		<>
@@ -63,9 +68,18 @@ const Product: React.FC = () => {
 									</ul>
 								</div>
 								<span className={cl.price}>{toRub.format(item.price)}</span>
-								<PrimaryButton onClick={() => handleAdding(item)}>
-									Add to cart
-								</PrimaryButton>
+								<div className={cl.buttons}>
+									<PrimaryButton onClick={() => handleAdding(item)}>
+										Add to cart
+									</PrimaryButton>
+									<FavoritesBtn
+										onAdd={() => dispatch(addToFavorites(item))}
+										onRemove={() => dispatch(removeFromFavorites(item.id))}
+										isLiked={
+											favItems.find(el => el.id === item.id) ? true : false
+										}
+									/>
+								</div>
 							</div>
 						</div>
 						<p className={cl.descr}>{item.info}</p>

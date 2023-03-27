@@ -8,6 +8,7 @@ import Product from './components/Product/Product'
 import Footer from './components/Footer/Footer'
 import ContactPage from './pages/ContactPage'
 import AboutPage from './pages/AboutPage'
+import FavoritesPage from './pages/FavoritesPage';
 
 const App: React.FC = () => {
 	return (
@@ -20,6 +21,7 @@ const App: React.FC = () => {
 					<Route path='/:article' element={<Product />} />
 					<Route path='/contact' element={<ContactPage />} />
 					<Route path='/about' element={<AboutPage />} />
+					<Route path='/favorites' element={<FavoritesPage />} />
 				</Routes>
 			</main>
 			<Footer />
