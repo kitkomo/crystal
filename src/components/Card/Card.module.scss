@@ -1,7 +1,7 @@
 .root {
 	display: block;
 	max-width: 100%;
-	background-color: rgba(241,241,241,255);
+	background-color: rgba(241, 241, 241, 255);
 	max-width: 100%;
 	position: relative;
 }
@@ -30,7 +30,7 @@
 	margin: 10px 0 10px;
 	height: 25px;
 	overflow: hidden;
-	color: #3B3B3B;
+	color: #3b3b3b;
 }
 
 .price {
@@ -42,4 +42,15 @@
 	top: 20px;
 	right: 10px;
 	opacity: 0.5;
+}
+
+@media (max-width: 1100px) {
+	.type {
+		font-size: 10px;
+	}
+
+	.name {
+		font-size: 14px;
+		height: 20px;
+	}
 }

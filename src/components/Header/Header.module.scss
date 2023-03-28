@@ -56,3 +56,71 @@
 .activeLink::after {
 	opacity: 1 !important;
 }
+
+.burger {
+	width: 80px;
+	height: 100%;
+	position: relative;
+	display: none;
+	border-radius: 12px;
+	background-color: #fff;
+
+	div {
+		width: 50%;
+		height: 2px;
+		background-color: #000;
+		position: absolute;
+		left: 25%;
+
+		&:nth-child(1) {
+			top: 20px;
+		}
+		&:nth-child(2) {
+			bottom: 20px;
+		}
+	}
+}
+
+@media (max-width: 1100px) {
+	.header {
+		grid-template: 60px / 200px 1fr auto;
+	}
+	.burger {
+		display: block;
+		align-self: center;
+		justify-self: center;
+	}
+
+	.menu {
+		z-index: 10;
+		position: absolute;
+		flex-direction: column;
+		background-color: #2b662d;
+		padding: 30px 50px;
+		border-radius: 12px;
+		top: 130px;
+		right: 20px;
+	}
+
+	.menu__item {
+		a {
+			padding: 20px;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.header {
+		grid-template: 60px / 1fr 1fr auto;
+	}
+}
+@media (max-width: 480px) {
+	.header {
+		grid-template: 60px 60px / 1fr auto;
+		row-gap: 10px;
+	}
+
+	.menu {
+		top: 180px;
+	}
+}

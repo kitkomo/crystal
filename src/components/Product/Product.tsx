@@ -47,7 +47,7 @@ const Product: React.FC<ProductProps> = ({data}) => {
 							<img className={cl.image} src={item.imageUrl} alt='product' />
 							<div className={cl.name}>
 								<span className={cl.subtitle}>{item.type}</span>
-								<h1 className={cl.image}>{item.name}</h1>
+								<h1>{item.name}</h1>
 							</div>
 							<div className={cl.info}>
 								<span className={cl.article}>article: {item.article}</span>

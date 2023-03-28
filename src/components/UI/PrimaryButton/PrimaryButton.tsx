@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import cl from './PrimaryButton.module.scss'
 
 const PrimaryBtn = styled.button<PrimaryButton>`
-	width: ${props => props.width ? props.width + 'px' : '100%'};
+	max-width: ${props => props.width ? props.width + 'px' : '100%'};
 `
 
 interface PrimaryButton {

@@ -31,3 +31,27 @@
 		font-size: 17px;
 	}
 }
+
+@media (max-width: 1100px) {
+	.block__title {
+	font-size: 20px;
+}
+
+.block__info {
+	font-size: 14px;
+}
+
+.block__connect {
+	font-size: 17px;
+
+	span {
+		font-size: 14px;
+	}
+}
+}
+@media (max-width: 1100px) {
+	.blocks {
+	
+	grid-template-columns: auto;
+}
+}

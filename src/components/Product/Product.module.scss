@@ -99,3 +99,80 @@
 	display: flex;
 	gap: 10px;
 }
+
+@media (max-width: 1150px) {
+	.name {
+		span {
+			font-size: 14px;
+		}
+
+		h1 {
+			font-size: 40px;
+		}
+	}
+
+	.descr {
+		max-width: 100%;
+	}
+
+	.volume {
+		span {
+			font-size: 14px;
+		}
+
+		ul {
+			margin: 10px 0 0;
+			gap: 10px;
+
+			button {
+				padding: 8px;
+				height: 50px;
+				min-width: 50px;
+				font-size: 12px;
+			}
+		}
+	}
+	.price {
+		font-size: 18px;
+	}
+
+	.article {
+		font-size: 13px;
+	}
+
+	.info {
+		gap: 15px;
+	}
+}
+
+@media (max-width: 900px) {
+	.mainContainer {
+		flex-direction: column;
+		gap: 10px;
+	}
+	.name {
+		span {
+			font-size: 12px;
+		}
+
+		h1 {
+			font-size: 30px;
+		}
+	}
+}
+@media (max-width: 600px) {
+	.name {
+		position: static;
+		max-width: 100%;
+		span {
+			font-size: 11px;
+		}
+
+		h1 {
+			font-size: 25px;
+		}
+	}
+	.image {
+		width: 100%;
+	}
+}

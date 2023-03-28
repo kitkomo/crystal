@@ -4,6 +4,8 @@
 	justify-content: space-between;
 	gap: 20px;
 
+	@media (min-width: 800px) {
+		
 	&:hover {
 		.count {
 			opacity: 1;
@@ -13,6 +15,8 @@
 			opacity: 1;
 		}
 	}
+	}
+
 }
 
 .image {
@@ -61,14 +65,86 @@
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	opacity: 0;
 	transition: opacity 0.15s ease-in-out;
+
+	@media (min-width: 800px) {
+	opacity: 0;
+		
+	}
 }
 
 .delBtn {
-	opacity: 0;
+	
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
 	transition: opacity 0.15s ease-in-out;
+
+	@media (min-width: 800px) {
+	opacity: 0;
+		
+	}
+}
+
+@media (max-width: 1200px) {
+	.item {
+		gap: 15px;
+	}
+
+	.image {
+		width: 100px;
+		height: 100px;
+	}
+
+	.title {
+		font-size: 16px;
+		height: 18px;
+	}
+
+	.subtitle {
+		font-size: 10px;
+	}
+
+	.volume {
+		font-size: 12px;
+	}
+
+	.price {
+		font-size: 16px;
+	}
+
+	.count {
+		font-size: 12px;
+	}
+}
+@media (max-width: 700px) {
+	.item {
+		gap: 8px;
+	}
+
+	.title {
+		font-size: 14px;
+		height: 16px;
+	}
+
+	.subtitle {
+		font-size: 8px;
+	}
+
+	.volume {
+		font-size: 10px;
+	}
+
+	.price {
+		font-size: 14px;
+	}
+
+	.count {
+		font-size: 10px;
+	}
+
+	.image {
+		width: 80px;
+		height: 80px;
+	}
 }
