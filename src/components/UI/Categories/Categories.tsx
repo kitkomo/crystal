@@ -1,13 +1,13 @@
 import React from 'react'
 
-import { useAppSelector, useAppDispatch } from '../../store/hooks'
-import { categories, changeCategory } from '../../store/slices/filterSlice'
+import { useAppSelector, useAppDispatch } from '../../../store/hooks'
+import { categories, changeCategory } from '../../../store/slices/filterSlice'
 
 import cl from './Categories.module.scss'
 
 const Categories: React.FC = () => {
 	const dispatch = useAppDispatch()
-	const {category} = useAppSelector(state => state.filter)
+	const { category } = useAppSelector(state => state.filter)
 	const linkActive = `${cl.filterBar__button} ${cl.active}`
 
 	return (

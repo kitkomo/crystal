@@ -1,20 +1,23 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
 
 import PrimaryButton from '../UI/PrimaryButton/PrimaryButton'
 import { useAppDispatch, useAppSelector } from './../../store/hooks'
 import { addToCart } from '../../store/slices/cartSlice'
-import { useProductQuery } from '../../store/productsApi'
 import { IProduct } from './../../models/IProduct'
 import { toRub } from '../../helpers/currencyFormat'
-import { addToFavorites, removeFromFavorites } from '../../store/slices/favoritesSlice'
+import {
+	addToFavorites,
+	removeFromFavorites,
+} from '../../store/slices/favoritesSlice'
 
 import cl from './Product.module.scss'
 import FavoritesBtn from '../UI/FavoritesBtn'
 
-const Product: React.FC = () => {
-	const { article } = useParams()
-	const { data } = useProductQuery(`${article}`)
+interface ProductProps {
+	data: IProduct[] | ''
+}
+
+const Product: React.FC<ProductProps> = ({data}) => {
 
 	const [activeVolume, setActiveVolume] = React.useState(0)
 	const favItems = useAppSelector(state => state.favorites.items)
@@ -34,8 +37,6 @@ const Product: React.FC = () => {
 			}),
 		)
 	}
-
-	// const isInFav = favItems.find(item => item.id === )
 
 	return (
 		<>

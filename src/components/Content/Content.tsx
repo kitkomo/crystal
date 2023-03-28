@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 
-import Categories from '../Categories/Categories'
+import Categories from '../UI/Categories/Categories'
 import Card from '../Card/Card'
 import CardSkeleton from '../Card/CardSkeleton'
 
