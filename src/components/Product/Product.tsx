@@ -17,8 +17,7 @@ interface ProductProps {
 	data: IProduct[] | ''
 }
 
-const Product: React.FC<ProductProps> = ({data}) => {
-
+const Product: React.FC<ProductProps> = ({ data }) => {
 	const [activeVolume, setActiveVolume] = React.useState(0)
 	const favItems = useAppSelector(state => state.favorites.items)
 
@@ -44,7 +43,9 @@ const Product: React.FC<ProductProps> = ({data}) => {
 				data.map(item => (
 					<div key={item.id}>
 						<div className={cl.mainContainer}>
-							<img className={cl.image} src={item.imageUrl} alt='product' />
+							<div className={cl.imageContainer}>
+								<img className={cl.image} src={item.imageUrl} alt='product' />
+							</div>
 							<div className={cl.name}>
 								<span className={cl.subtitle}>{item.type}</span>
 								<h1>{item.name}</h1>

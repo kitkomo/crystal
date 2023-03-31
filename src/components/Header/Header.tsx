@@ -13,6 +13,11 @@ const Header: React.FC = () => {
 	const [menuOpen, setMenuOpen] = React.useState(false)
 
 	React.useEffect(() => {
+		if (window.innerWidth > 1100) {
+			setMenuOpen(true)
+		} else {
+			setMenuOpen(false)
+		}
 		window.addEventListener('resize', () => {
 			if (window.innerWidth > 1100) {
 				setMenuOpen(true)
