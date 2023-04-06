@@ -17,3 +17,26 @@ a {
 	color: inherit;
 	text-decoration: none;
 }
+
+
+.cart-appear-active {
+	opacity: 1;
+}
+
+.cart-enter {
+	opacity: 0;
+	transition: opacity 200ms ease-in-out;
+}
+
+.cart-enter-active {
+	opacity: 1;
+}
+
+.cart-exit {
+	opacity: 1;
+	transition: opacity 200ms ease-in-out;
+}
+
+.cart-exit-active {
+	opacity: 0;
+}
