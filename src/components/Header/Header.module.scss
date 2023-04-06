@@ -36,8 +36,14 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-
 		position: relative;
+		transition: box-shadow 60ms ease-in-out;
+		
+		@media (min-width: 800px) {
+			&:hover {
+				box-shadow: 0 0 5px 5px #e8e8e87e;
+			}
+		}
 
 		&::after {
 			content: '';
@@ -52,7 +58,9 @@
 		}
 	}
 }
-
+.activeLink {
+	box-shadow: 0 0 5px 5px #e8e8e87e;
+}
 .activeLink::after {
 	opacity: 1 !important;
 }

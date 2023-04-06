@@ -8,4 +8,11 @@
 	text-transform: uppercase;
 	font-weight: 500;
 	font-size: 14px;
+	transition: box-shadow 60ms ease-in-out;
+
+	@media (min-width: 800px) {
+		&:hover {
+			box-shadow: 0 0 5px 5px #e8e8e87e;
+		}
+	}
 }
