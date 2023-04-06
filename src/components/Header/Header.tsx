@@ -11,64 +11,80 @@ import { cartState } from '../../store/slices/cartSlice'
 const Header: React.FC = () => {
 	const dispatch = useAppDispatch()
 	const [menuOpen, setMenuOpen] = React.useState(false)
+	const menuRef = React.useRef<HTMLUListElement>(null)
+	const burgerRef = React.useRef<HTMLDivElement>(null)
+
+	const menuClasses = [cl.menu]
+
+	if (menuOpen) {
+		menuClasses.push(cl.menuActive)
+	}
 
 	React.useEffect(() => {
-		if (window.innerWidth > 1100) {
-			setMenuOpen(true)
-		} else {
-			setMenuOpen(false)
-		}
-		window.addEventListener('resize', () => {
-			if (window.innerWidth > 1100) {
-				setMenuOpen(true)
-			} else {
-				setMenuOpen(false)
+		const handleOutsideClick = (event: MouseEvent) => {
+			if (burgerRef.current) {
+				if (
+					menuRef.current &&
+					!event.composedPath().includes(menuRef.current) &&
+					!event.composedPath().includes(burgerRef.current)
+				) {
+					setMenuOpen(false)
+				}
 			}
-		})
+		}
+		document.body.addEventListener('click', handleOutsideClick)
+		return () => document.body.removeEventListener('click', handleOutsideClick)
 	}, [])
 
 	return (
 		<header className={cl.header}>
 			<Logo />
-			{menuOpen && (
-				<ul className={cl.menu}>
-					<li className={cl.menu__item}>
-						<NavLink
-							className={props => (props.isActive ? cl.activeLink : '')}
-							to='/'
-						>
-							Shop
-						</NavLink>
-					</li>
-					<li className={cl.menu__item}>
-						<NavLink
-							className={props => (props.isActive ? cl.activeLink : '')}
-							to='/favorites'
-						>
-							Favorites
-						</NavLink>
-					</li>
-					<li className={cl.menu__item}>
-						<NavLink
-							className={props => (props.isActive ? cl.activeLink : '')}
-							to='/contact'
-						>
-							Contact
-						</NavLink>
-					</li>
-					<li className={cl.menu__item}>
-						<NavLink
-							className={props => (props.isActive ? cl.activeLink : '')}
-							to='/about'
-						>
-							About
-						</NavLink>
-					</li>
-				</ul>
-			)}
+
+			<ul className={menuClasses.join(' ')} ref={menuRef}>
+				<li className={cl.menu__item}>
+					<NavLink
+						className={props => (props.isActive ? cl.activeLink : '')}
+						to='/'
+						onClick={() => setMenuOpen(!menuOpen)}
+					>
+						Shop
+					</NavLink>
+				</li>
+				<li className={cl.menu__item}>
+					<NavLink
+						className={props => (props.isActive ? cl.activeLink : '')}
+						to='/favorites'
+						onClick={() => setMenuOpen(!menuOpen)}
+					>
+						Favorites
+					</NavLink>
+				</li>
+				<li className={cl.menu__item}>
+					<NavLink
+						className={props => (props.isActive ? cl.activeLink : '')}
+						to='/contact'
+						onClick={() => setMenuOpen(!menuOpen)}
+					>
+						Contact
+					</NavLink>
+				</li>
+				<li className={cl.menu__item}>
+					<NavLink
+						className={props => (props.isActive ? cl.activeLink : '')}
+						to='/about'
+						onClick={() => setMenuOpen(!menuOpen)}
+					>
+						About
+					</NavLink>
+				</li>
+			</ul>
 
 			<Button onClick={() => dispatch(cartState())}>View Cart</Button>
-			<div className={cl.burger} onClick={() => setMenuOpen(!menuOpen)}>
+			<div
+				ref={burgerRef}
+				className={cl.burger}
+				onClick={() => setMenuOpen(!menuOpen)}
+			>
 				<div className='line-1'></div>
 				<div className='line-2'></div>
 			</div>
