@@ -1,3 +1,20 @@
+# Crystal
+E-commerce shop
+
+## Stack:
+- Typescript
+- React.js
+- React Router
+- Redux Toolkit, Redux Thunk, RTK Query
+- Axios
+- styled-components
+- SCSS
+- React Transition Group
+- React Skeleton
+
+*Backend provided with mockAPI*
+
+===
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
